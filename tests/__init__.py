@@ -7,15 +7,15 @@ import unittest
 class TestBudd(unittest.TestCase):
 
     def setUp(self):
-        os.environ['JSON_FOO'] = '{"foo": 100, "bar": "foo"}'
-        os.environ['JSON_BAR'] = '3306'
-        os.environ['JSON_FOO_BAR'] = '"root"'
-        os.environ['RAW_FOO'] = 'utf8mb4'
-        os.environ['RAW_BAR'] = '20'
+        os.environ['J_FOO'] = '{"foo": 100, "bar": "foo"}'
+        os.environ['J_BAR'] = '3306'
+        os.environ['J_FOO_BAR'] = '"root"'
+        os.environ['R_FOO'] = 'utf8mb4'
+        os.environ['R_BAR'] = '20'
 
     def test_budd(self):
-        import budd.json.json as j
-        import budd.raw.raw as r
+        import budd.json.j as j
+        import budd.raw.r as r
         assert j["FOO"]["foo"] == 100
         assert j.FOO["foo"] == 100
         assert j["FOO"]["bar"] == "foo"
