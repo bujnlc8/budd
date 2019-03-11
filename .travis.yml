@@ -1,0 +1,9 @@
+language: python
+python:
+  - "3.7.2"
+
+script:
+  - make test
+
+after_script:
+  - make build -B && make install && make test

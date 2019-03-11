@@ -1,0 +1,7 @@
+.vscode/
+*.pyc
+venv
+.idea
+budd.egg-info
+build
+dist
